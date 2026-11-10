@@ -1,14 +1,31 @@
-# 5. Maior de dois números
-# Leia dois números e mostre qual é o maior. Se forem iguais, avise.
+soma = 0
+par = 0
+impar = 0
+maior = None
+menor = None
 
-n1 = float(input('Digite um numero: '))
-n2 = float(input('Digite um numero: '))
+for i in range(1, 6):
+    numero = int(input('Digite um numero: '))
+    soma = soma + numero
 
-if n1 > n2:
-    print(f'O numero {n1} e maior.')
+    if numero % 2 == 0:
+        par = par + 1
+    else:
+        impar = impar + 1
 
-elif n2 > n1:
-    print(f'O numero {n2} e maior.')
+    if maior is None:
+        maior = numero
+        menor = numero
+    else:
+        if numero > maior:
+            maior = numero
 
-else:
-    print('Os numero sao iguais.')abri
+        if numero < menor:
+            menor = numero
+
+print('RESULTADOS\n')
+print('Soma:', soma)
+print('Pares:', par)
+print('Impares:', impar)
+print('Maior:', maior)
+print('Menor:', menor)
