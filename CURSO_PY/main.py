@@ -1,31 +1,14 @@
-soma = 0
-par = 0
-impar = 0
-maior = None
-menor = None
 
-for i in range(1, 6):
-    numero = int(input('Digite um numero: '))
-    soma = soma + numero
+alunos = ['Marcos','Lucas','jose','Ricardo', 'Gabriel']
 
-    if numero % 2 == 0:
-        par = par + 1
-    else:
-        impar = impar + 1
+print(alunos)
 
-    if maior is None:
-        maior = numero
-        menor = numero
-    else:
-        if numero > maior:
-            maior = numero
+alunos.append('joao')
 
-        if numero < menor:
-            menor = numero
+alunos.remove('Marcos')
 
-print('RESULTADOS\n')
-print('Soma:', soma)
-print('Pares:', par)
-print('Impares:', impar)
-print('Maior:', maior)
-print('Menor:', menor)
+quantidade = len(alunos)
+
+print('Lista atualizada: ',alunos)
+print('Quantidade: ',quantidade)
+
